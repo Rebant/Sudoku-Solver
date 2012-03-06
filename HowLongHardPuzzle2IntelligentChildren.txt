@@ -1,0 +1,41 @@
+1-1-1-1-1-1-1-15
+-1-1-1-13-1-1-1-1
+-1-12-14-1-1-1-1
+-1-1-1-1-1-1-1-1-1
+-134-1-1-17-1-1
+-1-1-12-16-1-11
+2-1-1-1-15-1-1-1
+-17-1-1-1-1-13-1
+-1-1-1-1-11-1-1-1
+
+Now what would you like to do?
+(Please select a number)
+1. Check valid state
+2. Generate next moves
+3. Solve this puzzle!
+4. Solve & Generate Statistics.
+5. Solve Intelligently!
+6. Input new puzzle file
+7. Quit
+4
+The number of solutions this puzzle has is 2.
+The number of valid states (children) generated to find all solutions was 3403176.
+183967425
+469532817
+752148693
+621473589
+534819762
+897256341
+216385974
+975624138
+348791256
+
+193867425
+468532917
+752149683
+621473598
+534918762
+987256341
+216395874
+875624139
+349781256
