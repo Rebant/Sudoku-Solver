@@ -1,6 +1,6 @@
 public class Board {
 
-	int [][] holes;
+	int [][] holes; //Representation of the board
 	/*
 	 * *** *** ***
 	 * *** *** ***
@@ -62,7 +62,7 @@ public class Board {
 		Board[] totalBoards= new Board[9];
 
 		for (int i = 0; i < 9; i++){
-			totalBoards[i] = cloneBoard(); //Make totalBoards an array of clones
+			totalBoards[i]= cloneBoard(); //Make totalBoards an array of clones
 		}
 
 		for(int i= 1;i<10;i++){
@@ -93,19 +93,19 @@ public class Board {
 	 * to have 0 children.
 	 */
 	public int [][] numChildrenArray(Board board){
-		int[][] childrenArray = new int[9][9];
+		int[][] childrenArray= new int[9][9];
 
-		for(int row = 0; row < 9; row++){
-			for(int col = 0; col < 9; col++){
+		for(int row= 0;row<9;row++){
+			for(int col= 0;col<9;col++){
 				int holevalue= board.holes[row][col];
-				if(holevalue! = -1){
+				if(holevalue!=-1){
 					//If the square in the board at [row][col] is not empty, fill the corresponding square in numChildrenArray with 0
 					childrenArray[row][col]= 0;
 				}
 				else{
-					int numChildren = getNumChildren(board, row, col);
+					int numChildren= getNumChildren(board, row, col);
 					//Set the square at childrenArray[row][col] with the number of children it has
-					childrenArray[row][col] = numChildren;
+					childrenArray[row][col]= numChildren;
 				}
 			}
 		}
@@ -122,17 +122,17 @@ public class Board {
 	 * @return Returns the number of valid children boards generated if [row][col] is filled in on board.
 	 */
 	public int getNumChildren(Board board, int row, int col){
-		int validChildren = 0;
+		int validChildren= 0;
 
-		for(int i= 1; i < 10; i++){
-			board.holes[row][col] = i;
+		for(int i= 1;i<10;i++){
+			board.holes[row][col]= i;
 			if(board.validBoardState()) {
 				//If [row][col] is set to i and the new board is valid, add one to validChildren.
 				validChildren++;
 			}
 		}
 
-		board.holes[row][col] = -1; //Reset the square at [row][col] to what it was originally (-1)
+		board.holes[row][col]= -1; //Reset the square at [row][col] to what it was originally (-1)
 		return validChildren;
 	}
 
